@@ -8,6 +8,8 @@
 // el Scanln sirve para leer una letra del usuario y la guarda en la variable letra
 // para poder  tener un progreso lo que use fue  de clare en un if a letra  como tipo texto y le di como entrada a palabra luego meti corchetes
 // para asi poder obtener la longitud de la palabra  luego declare progreso = progreso + letra para asi que se vaya autocomplentando
+
+//puse muchos fmt.Println(" ") por que no sabia poner espacios entre cada una y como ve no le puse los _ _ _ _ ni el monito la verdad no tuve tiempo y no le mucho a go 
 package main
 
 import (
