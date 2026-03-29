@@ -6,6 +6,8 @@
 
 // el len sirve me sirvio para saber cantidad de letras que tiene la palabra
 // el Scanln sirve para leer una letra del usuario y la guarda en la variable letra
+// para poder  tener un progreso lo que use fue  de clare en un if a letra  como tipo texto y le di como entrada a palabra luego meti corchetes 
+//para asi poder obtener la longitud de la palabra  luego declare progreso = progreso + letra para asi que se vaya autocomplentando 
 package main
 
 import (
@@ -13,37 +15,40 @@ import (
 	"math/rand"
 	"time"
 )
-
 func main() {
 	palabras_alo_wey := []string{"hola", "wey", "comoestas", "pepito", "boca"}
-
 	rand.Seed(time.Now().UnixNano())
 	palabra := palabras_alo_wey[rand.Intn(len(palabras_alo_wey))]
 	var letra string
 	intentos := 0
-
+	progreso := ""
 	for {
 		fmt.Println("Adivina cual de todas las palabras te toco")
 		fmt.Println()
-		fmt.Println("pa que no te pierdas la palabra tiene", len(palabra), "letras")
-		fmt.Println()
-		fmt.Println("escribe una letra para que la adivines")
-		fmt.Println()
+		fmt.Println("progreso: de la palabra ", progreso)
+		fmt.Println(" ")
+		fmt.Println("escribe una letra para minimo iniciar")
+		fmt.Println(" ")
 		fmt.Scanln(&letra)
-		fmt.Println()
-		if letra == string(palabra[0]) {
-			fmt.Println("porfin que le atinas a una ya era mucho")
+		fmt.Println(" ")
+		if letra == string(palabra[len(progreso)]) {
+			progreso = progreso + letra
+			fmt.Println("ya mero")
 		} else {
 			intentos++
-			fmt.Println("ya mero te quedan sin oportunidad, intentos:", intentos)
-			fmt.Println()
+			fmt.Println("ya mero te quedan sin intentos:", intentos)
+			fmt.Println(" ")
+		}
+		if progreso == palabra {
+			fmt.Println("porfin das una:", palabra)
+			return
 		}
 		if intentos == 3 {
-			fmt.Println("ya ni modo lo dejaste tieso")
-			fmt.Println()
+			fmt.Println("te quedaste sin intentos sorry man")
+			fmt.Println(" ")
 
-			fmt.Println("la palabra es por qeu estas medio wey:", palabra)
-			fmt.Println()
+			fmt.Println("la palabra esta como veo que no le atinaste :", palabra)
+			fmt.Println(" ")
 			return
 		}
 	}
