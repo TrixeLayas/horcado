@@ -6,8 +6,8 @@
 
 // el len sirve me sirvio para saber cantidad de letras que tiene la palabra
 // el Scanln sirve para leer una letra del usuario y la guarda en la variable letra
-// para poder  tener un progreso lo que use fue  de clare en un if a letra  como tipo texto y le di como entrada a palabra luego meti corchetes 
-//para asi poder obtener la longitud de la palabra  luego declare progreso = progreso + letra para asi que se vaya autocomplentando 
+// para poder  tener un progreso lo que use fue  de clare en un if a letra  como tipo texto y le di como entrada a palabra luego meti corchetes
+// para asi poder obtener la longitud de la palabra  luego declare progreso = progreso + letra para asi que se vaya autocomplentando
 package main
 
 import (
@@ -15,6 +15,7 @@ import (
 	"math/rand"
 	"time"
 )
+
 func main() {
 	palabras_alo_wey := []string{"hola", "wey", "comoestas", "pepito", "boca"}
 	rand.Seed(time.Now().UnixNano())
