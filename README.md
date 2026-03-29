@@ -18,14 +18,14 @@ escribe una letra para minimo iniciar
 
 
 
-el juego que hice tine uan lista de 5 palabras:
+el juego tiene lista de 5 palabras:
 hola
 wey
 comoestas
 pepito
 boca
-El sistema selecciona una palabra de forma aleatoria usando rand.
-El jugador debe escribir letras para ir formando la palabra poco a poco.
+El sistema selecciona una palabra de forma aleatoria 
+ debe escribir letras para ir formando la palabra poco a poco.
 
 Ejemplo:
 w
